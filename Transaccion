@@ -1,8 +1,6 @@
 class Bus_trans
   rand bit [pckg_sz-1:pckg_sz-8] pckg_dest;
-  //rand int drvrs;
-  rand bit [pckg_sz-1:0] D_pop [bits-1:0][drvrs-1:0];
-  rand bit [7:0] broadcast;
+  rand bit [pckg_sz-1:0] D_pop;
 
   bit push [bits-1:0][drvrs-1:0] 
   bit pop [bits-1:0][drvrs-1:0] 
