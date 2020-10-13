@@ -1,0 +1,16 @@
+class Generador	
+  mailbox gendriv;//buzon entre generador y driver
+  int contador = 35;//cantidad de items que vamos a crear
+  
+  task run();
+  for (int i=0; i< num; i++)
+    begin
+      Bus_trans item=new;//creamos una transaccion nueva
+      item.randomize();// generamos los valores variables
+      gendriv.put(item);// enviamos los valores al buzon
+      $display ("T=%0t [Generador] Loop:%0d de %0d",$time,i+1);
+      @(driv_listo);//espera a que el evento termine desde el driver para hacer la siguiente iteración
+    end
+    $display("T=%0t Completada la generación de %0d items",$time, num);
+  endtask
+endclass
